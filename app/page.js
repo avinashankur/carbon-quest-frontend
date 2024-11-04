@@ -1,14 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowDown02Icon } from "hugeicons-react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Image from "next/image";
+import WhyCarbonQuest from "@/components/WhyCarbonQuest";
+import FAQ from "@/components/Faq";
+import { CircleEqual, CircleHelp, CircleUser, Sprout, UserRoundPlus } from "lucide-react";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <section className="h-screen mt-8 max-w-[70rem] mx-auto">
+      <section className="min-h-screen mt-8 max-w-[70rem] mx-auto">
         <h1 className="font-playfair text-6xl font-medium uppercase mb-6">
           Discover your Impact
         </h1>
@@ -23,14 +26,15 @@ export default function Home() {
           </p>
           <Link
             href="/signup"
-            className="border-2 border-black hover:bg-black hover:text-white transition px-4 py-2"
+            className="border-2 border-black hover:bg-black hover:text-white transition px-2 py-2 flex items-center gap-2"
           >
+            <UserRoundPlus size={20}/>
             Get Started
           </Link>
         </div>
       </section>
 
-      <section className="h-screen mt-10 flex flex-col justify-center align-center bg-grad">
+      {/* <section className="h-screen mt-10 flex flex-col justify-center align-center bg-grad">
         <div className="w-[70rem] mx-auto">
           <div className="border-b pb-10 border-black">
             <h1 className="text-5xl font-playfair font-medium uppercase text-white">
@@ -43,57 +47,77 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="grid place-items-center min-h-screen mb-[20rem]">
-        <div className="">
-          <h1 className="text-5xl font-medium font-playfair text-center mt-[5rem]">
-            Why CarbonQuest?
+      <section className="min-h-screen flex items-center justify-center">
+        <div className="mx-6 my-10 bg-accent-400 px-10 rounded-3xl min-h-[40rem] w-full flex flex-col gap-[5rem] items-center justify-center">
+          <h1 className="text-5xl font-playfair font-medium max-w-[40rem] text-center">
+            Calculating your Footprints takes just a few minutes
           </h1>
-          <div className="mt-16 flex flex-col gap-[6rem]">
-            <div className="flex gap-32 items-center justify-between">
-              <div className="h-[25rem] w-[40rem] relative">
-                <Image src="/feature1.png" fill />
-              </div>
-              <div className="max-w-[24rem]">
-                <h2 className="font-medium leading-[26px] mb-4 text-3xl">
-                  Personalized Carbon Insights
-                </h2>
-                <p className="text-neutral-500 text-justify leading-[22px] text-lg">
-                  Analyse your day-to-day carbon footprint and make informative
-                  decisions about your lifestyle that save the world by
-                  answering simple quesionts.
-                </p>
-              </div>
+          <div className="flex gap-10 text-justify">
+            <div className="max-w-[20rem]">
+              
+              <h2 className="font-bold text-xl mb-4 bg-accent-500 px-3 py-2 flex items-center gap-2"><CircleUser />Create your account</h2>
+              <p>
+                Join our community and start your journey towards a greener
+                lifestyle with a quick and easy sign-up process.
+              </p>
             </div>
-            <div className="flex gap-32 items-center justify-between">
-              <div className="max-w-[24rem]">
-                <h2 className="font-medium leading-[26px] mb-4 text-3xl">
-                  Interactive Visualizations
+            <div className="max-w-[20rem]">
+              <h2 className="font-bold text-xl mb-4 bg-accent-500 px-3 py-2 flex items-center gap-2">
+              <CircleEqual />
+                Calculate your footprints
+              </h2>
+              <p>
+                Answer a few questions to get a personalized view of your daily
+                carbon emissions, giving you insights into your environmental
+                impact.
+              </p>
+            </div>
+            <div className="max-w-[20rem]">
+              <h2 className="font-bold text-xl mb-4 bg-accent-500 px-3 py-2 flex items-center gap-2">
+              <Sprout />
+                Discover your impact!
                 </h2>
-                <p className="text-neutral-500 text-justify leading-[22px] text-lg">
-                  With visually stunning elements, you can easily understand
-                  where your biggest carbon contributions come from, making it
-                  easier to target areas for improvement.
-                </p>
-              </div>
-              <div className="h-[25rem] w-[40rem] relative border shadow-lg rounded">
-                <Image src="/feature2.jpeg" fill />
-              </div>
+              <p>
+                See your total carbon footprint and explore practical tips to
+                reduce it, helping you make a positive change for the planet.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mb-[20rem] max-w-[70rem] mx-auto flex flex-col items-center justify-between">
+      <WhyCarbonQuest />
+
+      <section className="mt-[20rem] max-w-[70rem] mx-auto flex flex-col items-center justify-between">
         <div>
-          <h1 className="text-6xl font-playfair font-bold text-center bg-clip-text text-transparent text-center bg-gradient-to-b from-green-900 to-[#66cc00]">
+          <h1 className="text-6xl font-playfair font-bold bg-clip-text text-transparent text-center bg-gradient-to-b from-green-900 to-[#66cc00] pb-2">
             Small Steps, Big Impact—Track, Learn, and Reduce Your Carbon
             Footprint Today!
           </h1>
         </div>
       </section>
 
+      <section className="min-h-screen mb-[20rem] pt-40 border-t mt-20">
+        <h1 className="text-5xl font-playfair font-medium text-center flex items-center justify-center gap-4">
+        <CircleHelp size={32}/>
+          Frequently Asked Questions
+        </h1>
+        <p className="mt-2 mb-20 text-center font-medium text-neutral-500">
+          Curious about something? Check out our FAQs below!
+        </p>
+        <FAQ />
+        <p className="text-center font-medium text-neutral-500 mt-4">
+          Have another question? Email us at{" "}
+          <Link
+            href="mailto:carbonquest@helpcare.com"
+            className="underline hover:text-black"
+          >
+            carbonquest@helpcare.com
+          </Link>
+        </p>
+      </section>
       <Footer />
     </>
   );

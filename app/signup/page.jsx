@@ -13,8 +13,8 @@ export default function SignUp() {
       <section className="w-1/2 border-r grid place-items-center h-screen">
         <div>
           <div className="my-10 text-center">
-            <h1 className="font-medium font-protest text-4xl">CarbonQuest</h1>
-            <p className='font-medium lowercase text-neutral-400'>A Quest to Conqueror Carbon Emission.</p>
+            <h1 className="font-bold font-playfair text-4xl">CarbonQuest</h1>
+            <p className='font-medium lowercase text-neutral-500'>A Quest to Conqueror Carbon Emission.</p>
           </div>
 
           {!isSignUp ? (
@@ -26,7 +26,7 @@ export default function SignUp() {
               
               <Button
                 color="primary"
-                className="mt-3"
+                className="mt-3 font-medium"
                 onClick={() => setIsSignUp(true)}
               >
                 Sign Up
