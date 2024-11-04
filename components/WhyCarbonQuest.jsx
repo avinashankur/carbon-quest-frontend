@@ -11,6 +11,8 @@ import {
   PieChart,
   Pie,
   Cell,
+  BarChart,
+  Bar,
 } from "recharts";
 
 import {
@@ -41,23 +43,55 @@ const pieData = [
 const insights = [
   {
     icon: Car03Icon,
-    title: "Transoportation",
-    desc: "Switch to electricl vehicles or use public transort to reduce emissions.",
+    title: "Transportation",
+    description:
+      "Switch to electric vehicles or use public transport to reduce emissions.",
+    details:
+      "Transportation accounts for a significant portion of individual carbon footprints. By choosing electric vehicles, carpooling, or using public transport, you can dramatically reduce your emissions.",
+    potentialSavings: [
+      { name: "Car", savings: 2.5 },
+      { name: "Public Transport", savings: 1.2 },
+      { name: "Bike", savings: 0.1 },
+    ],
   },
   {
     icon: Home05Icon,
     title: "Home Energy",
-    desc: "Switch to renewable energy sources and improve insulation to reduce your carbon footprint.",
+    description:
+      "Improve insulation and use energy-efficient appliances to lower your carbon footprint.",
+    details:
+      "Your home's energy consumption plays a crucial role in your overall carbon footprint. Upgrading to energy-efficient appliances and improving insulation can lead to substantial reductions in energy use and emissions.",
+    potentialSavings: [
+      { name: "Insulation", savings: 1.8 },
+      { name: "Efficient Appliances", savings: 1.5 },
+      { name: "Solar Panels", savings: 2.2 },
+    ],
   },
   {
     icon: Recycle01Icon,
     title: "Waste Management",
-    desc: "Implement recycling and composting to minimize landfill waste.",
+    description:
+      "Implement recycling and composting to minimize landfill waste.",
+    details:
+      "Proper waste management through recycling and composting can significantly reduce methane emissions from landfills. It also conserves resources and energy that would be used in producing new products.",
+    potentialSavings: [
+      { name: "Recycling", savings: 0.9 },
+      { name: "Composting", savings: 0.7 },
+      { name: "Reducing", savings: 1.1 },
+    ],
   },
   {
     icon: ShoppingCartFavorite01Icon,
     title: "Conscious Shopping",
-    desc: "Choose eco-friendly products and reuce unnecessary purchases.",
+    description:
+      "Choose eco-friendly products and reduce unnecessary purchases.",
+    details:
+      "Every product we buy has a carbon footprint from its production and transportation. By choosing eco-friendly products and reducing overall consumption, we can significantly lower our indirect carbon emissions.",
+    potentialSavings: [
+      { name: "Eco-products", savings: 1.3 },
+      { name: "Second-hand", savings: 1.6 },
+      { name: "Minimalism", savings: 1.8 },
+    ],
   },
 ];
 
@@ -143,25 +177,46 @@ export default function WhyCarbonQuest() {
           Interactive Visualizations
         </h1>
         <div className="bg-neutral-100 border rounded-2xl px-4 py-8 mx-6 mt-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
             {insights.map((insight, index) => (
               <div
-                key={index}
-                className={`rounded-2xl p-4 flex flex-col items-center cursor-pointer transition duration-200 ${
-                  activeInsight === index ? "bg-accent-400 hover:bg-accent-400" : "hover:bg-neutral-200"
+                key={insight.title}
+                className={`flex flex-col items-center p-4 rounded-lg cursor-pointer transition-colors ${
+                  activeInsight === index
+                    ? "bg-accent-400"
+                    : "hover:bg-neutral-200"
                 }`}
                 onClick={() => setActiveInsight(index)}
               >
-                <insight.icon size={40} />
-                <h2 className="text-lg font-semibold mb-2">{insight.title}</h2>
+                <insight.icon className="h-12 w-12 mb-2 text-gray-700" />
+                <span className="text-center font-semibold text-gray-800">
+                  {insight.title}
+                </span>
               </div>
             ))}
           </div>
-          <div key={activeInsight} className="px-20 py-10 bg-neutral-200 rounded-xl mt-8">
-            <h2 className="text-xl font-semibold">
+          <div key={activeInsight} className="border-t rounded-lg p-6">
+            <h4 className="text-2xl font-semibold mb-4 text-gray-800">
               {insights[activeInsight].title}
-            </h2>
-            <p>{insights[activeInsight].desc}</p>
+            </h4>
+            <p className="text-gray-700 mb-4">
+              {insights[activeInsight].description}
+            </p>
+            <p className="text-gray-600 mb-6">
+              {insights[activeInsight].details}
+            </p>
+            <h5 className="text-xl font-semibold mb-4 text-gray-800">
+              Potential CO₂ Savings (tons/year)
+            </h5>
+            <ResponsiveContainer width="100%" height={200}>
+              <BarChart data={insights[activeInsight].potentialSavings}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="savings" fill="#c3ea65" />
+              </BarChart>
+            </ResponsiveContainer>
           </div>
         </div>
       </div>
