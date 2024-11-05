@@ -202,10 +202,10 @@ export default function WhyCarbonQuest() {
             <p className="text-gray-700 mb-4">
               {insights[activeInsight].description}
             </p>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-16">
               {insights[activeInsight].details}
             </p>
-            <h5 className="text-xl font-semibold mb-4 text-gray-800">
+            <h5 className="font-semibold mb-4 text-gray-800">
               Potential CO₂ Savings (tons/year)
             </h5>
             <ResponsiveContainer width="100%" height={200}>

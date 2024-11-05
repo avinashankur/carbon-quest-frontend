@@ -1,6 +1,7 @@
 import { Button, Input } from "@nextui-org/react";
 import { UserRoundPlus } from "lucide-react";
 import Link from "next/link";
+import Butt from "./Button";
 
 export default function Footer() {
   return (
@@ -17,13 +18,14 @@ export default function Footer() {
             difference!
           </h1>
           <div className="flex gap-4">
-            <Link
+            {/* <Link
               href="/signup"
               className="bg-accent-500 border border-accent-600 px-6 py-2 hover:opacity-80 transition flex items-center gap-2"
             >
               <UserRoundPlus className="size-5" />
               Sign Up
-            </Link>
+            </Link> */}
+            <Butt href="" className="border-black border-2 bg-white">Sign Up</Butt>
           </div>
           <p className="mt-10 text-sm">All rights reserved.</p>
         </div>
