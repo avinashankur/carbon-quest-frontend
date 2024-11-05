@@ -8,14 +8,14 @@ export default function Login() {
       <section className="w-1/2 border-r grid place-items-center h-screen">
         <div>
           <div className="my-10 text-center">
-            <h1 className="font-bold font-playfair text-4xl">CarbonQuest</h1>
+            <Link href='/' className="font-bold font-playfair text-4xl">CarbonQuest</Link>
             <p className="font-medium lowercase text-neutral-500">A Quest to Conqueror Carbon Emission.</p>
           </div>
           <form action="" className="flex flex-col gap-4">
             <Input type="text" label="username" className="w-[25rem]" />
             <Input type="password" label="password" className="w-[25rem]" />
             <Link href="" className="text-blue-400 text-xs font-medium text-right">Forgot password?</Link>
-            <Button color="primary" className="mt-3 font-medium">
+            <Button className="mt-3 font-medium bg-accent-500">
               Log In
             </Button>
             <p className="font-medium text-center text-xs">

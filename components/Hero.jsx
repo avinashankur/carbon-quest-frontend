@@ -6,7 +6,7 @@ import Butt from "./Button";
 export default function Hero() {
   return (
     <section className="relative bg-white text-gray-800 overflow-hidden">
-      <div className="absolute inset-0  top-[-20rem] z-0">
+      <div className="absolute inset-0 top-[-20rem] z-0">
         <svg
           className="w-full h-full"
           viewBox="0 0 1000 1000"
@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-5xl md:text-6xl font-medium mb-6 font-playfair">
+            <h1 className="text-5xl md:text-6xl font-semibold mb-6 font-playfair">
               Discover Your <span className="text-accent-500">Impact</span>
             </h1>
             <p className="md:text-lg text-gray-600 mb-8">

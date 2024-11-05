@@ -13,8 +13,10 @@ export default function SignUp() {
       <section className="w-1/2 border-r grid place-items-center h-screen">
         <div>
           <div className="my-10 text-center">
-            <h1 className="font-bold font-playfair text-4xl">CarbonQuest</h1>
-            <p className='font-medium lowercase text-neutral-500'>A Quest to Conqueror Carbon Emission.</p>
+            <Link href='/' className="font-bold font-playfair text-4xl">CarbonQuest</Link>
+            <p className="font-medium lowercase text-neutral-500">
+              A Quest to Conqueror Carbon Emission.
+            </p>
           </div>
 
           {!isSignUp ? (
@@ -23,10 +25,9 @@ export default function SignUp() {
               <Input type="text" label="username" className="w-[25rem]" />
               <Input type="email" label="email" className="w-[25rem]" />
               <Input type="password" label="password" className="w-[25rem]" />
-              
+
               <Button
-                color="primary"
-                className="mt-3 font-medium"
+                className="mt-3 font-medium bg-accent-500"
                 onClick={() => setIsSignUp(true)}
               >
                 Sign Up
@@ -41,18 +42,35 @@ export default function SignUp() {
             </form>
           ) : (
             <div>
-              <form htmlFor="" className='flex flex-col gap-3'>
+              <form htmlFor="" className="flex flex-col gap-3">
                 <Input type="number" label="age" className="w-[25rem]" />
-                <Input type="number" label="family members" className="w-[25rem]" />
+                <Input
+                  type="number"
+                  label="family members"
+                  className="w-[25rem]"
+                />
                 <div className="flex justify-between items-center">
-                <label htmlFor="" className="font-medium">
-                  Profile Picture:
-                </label>
-                <Input type="file" className="w-[7rem]" />
-              </div>
-                <div className='flex justify-between mt-4 gap-2'>
-                  <Button color="primary" radius="none" className='w-full' onClick={() => setIsSignUp(false)} startContent={<ArrowLeft01Icon />}>Back</Button>
-                  <Button color="primary" radius="none" className='w-full' endContent={<ArrowRight01Icon />}>Register</Button>
+                  <label htmlFor="" className="font-medium">
+                    Profile Picture:
+                  </label>
+                  <Input type="file" className="w-[7rem]" />
+                </div>
+                <div className="flex justify-between mt-4 gap-2">
+                  <Button
+                    radius="none"
+                    className="w-full bg-accent-500"
+                    onClick={() => setIsSignUp(false)}
+                    startContent={<ArrowLeft01Icon />}
+                  >
+                    Back
+                  </Button>
+                  <Button
+                    radius="none"
+                    className="w-full bg-accent-500"
+                    endContent={<ArrowRight01Icon />}
+                  >
+                    Register
+                  </Button>
                 </div>
               </form>
             </div>
