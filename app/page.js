@@ -1,54 +1,19 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowDown02Icon } from "hugeicons-react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WhyCarbonQuest from "@/components/WhyCarbonQuest";
-import FAQ from "@/components/Faq";
+import FAQ from "@/components/FAQ";
 import {
   CircleEqual,
-  CircleHelp,
   CircleUser,
   Sprout,
-  UserRoundPlus,
 } from "lucide-react";
 
 export default function Home() {
   return (
     <>
       <Header />
-      {/* <section className="min-h-screen mt-8 max-w-[70rem] mx-auto">
-        <h1 className="font-playfair text-6xl font-medium uppercase mb-6">
-          Discover your Impact
-        </h1>
-        <div className="h-[32rem] w-full bg-neutral-400 overflow-hidden">
-          <Image src="/download.jpeg" height={800} width={1200} />
-        </div>
-        <div className="flex justify-between items-center mt-4">
-          <p className="max-w-[40rem]">
-            Welcome to CarbonQuest, where you can easily track your carbon
-            emissions and progress. Join us in the mission towards a greater
-            future.
-          </p>
-          <Butt href="/signup">Get Started</Butt>
-        </div>
-      </section> */}
-
-      {/* <section className="h-screen mt-10 flex flex-col justify-center align-center bg-grad">
-        <div className="w-[70rem] mx-auto">
-          <div className="border-b pb-10 border-black">
-            <h1 className="text-5xl font-playfair font-medium uppercase text-white">
-              About carbonquest
-            </h1>
-            <p className="mt-8 max-w-[50rem] text-xl">
-              At CarbonQuest, we are dedicated to empowering users to monitor
-              and reduce their carbon footprint. Our platform offers a fun and
-              rewarding experience to promote sustainable living.
-            </p>
-          </div>
-        </div>
-      </section> */}
       <Hero />
       <section className="min-h-screen flex">
         <div className="mx-6 bg-accent-400 mb-20 px-10 rounded-3xl min-h-[40rem] w-full flex flex-col gap-[5rem] items-center justify-center">

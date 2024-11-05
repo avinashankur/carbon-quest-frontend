@@ -102,7 +102,7 @@ export default function WhyCarbonQuest() {
     <section className="mt-10 max-w-[70rem] mx-auto">
       <div className="text-center">
         <h1 className="text-5xl font-playfair font-medium">Why CarbonQuest?</h1>
-        <p className="mt-2">Here's why people believe in us!</p>
+        <p className="mt-2">Here&apos;s why people believe in us!</p>
       </div>
 
       {/* Personalized Carbon Insights */}
@@ -165,7 +165,7 @@ export default function WhyCarbonQuest() {
             3.2 tons CO2 saved this year
           </h2>
           <p>
-            That's equivalent to planting 53 tress or taking 0.7 cars off the
+            That&apos;s equivalent to planting 53 tress or taking 0.7 cars off the
             road for a year!
           </p>
         </div>
