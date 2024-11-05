@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowDown02Icon } from "hugeicons-react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import WhyCarbonQuest from "@/components/WhyCarbonQuest";
 import FAQ from "@/components/Faq";
 import {
@@ -12,13 +13,12 @@ import {
   Sprout,
   UserRoundPlus,
 } from "lucide-react";
-import Butt from "@/components/Button";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <section className="min-h-screen mt-8 max-w-[70rem] mx-auto">
+      {/* <section className="min-h-screen mt-8 max-w-[70rem] mx-auto">
         <h1 className="font-playfair text-6xl font-medium uppercase mb-6">
           Discover your Impact
         </h1>
@@ -31,16 +31,9 @@ export default function Home() {
             emissions and progress. Join us in the mission towards a greater
             future.
           </p>
-          {/* <Link
-            href="/signup"
-            className="border-2 border-black hover:bg-black hover:text-white transition px-2 py-2 flex items-center gap-2"
-          >
-            <UserRoundPlus size={20} />
-            Get Started
-          </Link> */}
           <Butt href="/signup">Get Started</Butt>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="h-screen mt-10 flex flex-col justify-center align-center bg-grad">
         <div className="w-[70rem] mx-auto">
@@ -56,9 +49,9 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-
-      <section className="min-h-screen flex items-center justify-center">
-        <div className="mx-6 my-10 bg-accent-400 px-10 rounded-3xl min-h-[40rem] w-full flex flex-col gap-[5rem] items-center justify-center">
+      <Hero />
+      <section className="min-h-screen flex">
+        <div className="mx-6 bg-accent-400 mb-20 px-10 rounded-3xl min-h-[40rem] w-full flex flex-col gap-[5rem] items-center justify-center">
           <h1 className="text-5xl font-playfair font-medium max-w-[40rem] text-center">
             Calculating your Footprints takes just a few minutes
           </h1>
@@ -100,13 +93,12 @@ export default function Home() {
 
       <WhyCarbonQuest />
 
-      <section className="min-h-screen mb-[20rem] pt-40 border-t mt-20">
-        <h1 className="text-5xl font-playfair font-medium text-center flex items-center justify-center gap-4">
-          <CircleHelp size={32} />
+      <section className="min-h-screen mb-[20rem] pt-40 mt-20">
+        <h1 className="text-5xl font-playfair font-medium text-center">
           Frequently Asked Questions
         </h1>
         <p className="mt-2 mb-20 text-center font-medium text-neutral-500">
-          Curious about something? Check out our FAQs below!
+          Curious about something? Check out FAQs below!
         </p>
         <FAQ />
         <p className="text-center font-medium text-neutral-500 mt-4">
@@ -121,7 +113,7 @@ export default function Home() {
       </section>
       <section className="my-[20rem] max-w-[70rem] mx-auto flex flex-col items-center justify-between">
         <div>
-          <h1 className="text-6xl font-playfair font-bold bg-clip-text text-transparent text-center bg-gradient-to-b from-green-900 to-[#66cc00] pb-2">
+          <h1 className="text-6xl font-playfair font-bold bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-800 to-[#66cc00] pb-2">
             Small Steps, Big Impact—Track, Learn, and Reduce Your Carbon
             Footprint Today!
           </h1>

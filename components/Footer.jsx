@@ -25,7 +25,7 @@ export default function Footer() {
               <UserRoundPlus className="size-5" />
               Sign Up
             </Link> */}
-            <Butt href="" className="border-black border-2 bg-white">Sign Up</Butt>
+            <Butt href="/signup" className="bg-white">Sign Up</Butt>
           </div>
           <p className="mt-10 text-sm">All rights reserved.</p>
         </div>

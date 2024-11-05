@@ -33,7 +33,7 @@ const lineData = [
 ];
 
 const pieData = [
-  { name: "Car03Icon", value: 30, color: "#c3ea65" },
+  { name: "Transport", value: 30, color: "#c3ea65" },
   { name: "Home Energy", value: 25, color: "#9bcc33" },
   { name: "Food", value: 20, color: "#73ae00" },
   { name: "Shopping", value: 15, color: "#4b9000" },
@@ -49,9 +49,9 @@ const insights = [
     details:
       "Transportation accounts for a significant portion of individual carbon footprints. By choosing electric vehicles, carpooling, or using public transport, you can dramatically reduce your emissions.",
     potentialSavings: [
-      { name: "Car", savings: 2.5 },
+      { name: "Bike", savings: 2.5 },
       { name: "Public Transport", savings: 1.2 },
-      { name: "Bike", savings: 0.1 },
+      { name: "Car", savings: 0.1 },
     ],
   },
   {
@@ -195,7 +195,7 @@ export default function WhyCarbonQuest() {
               </div>
             ))}
           </div>
-          <div key={activeInsight} className="border-t rounded-lg p-6">
+          <div key={activeInsight} className="border-t p-6">
             <h4 className="text-2xl font-semibold mb-4 text-gray-800">
               {insights[activeInsight].title}
             </h4>
