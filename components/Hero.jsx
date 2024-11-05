@@ -1,5 +1,4 @@
 "use client";
-import { ArrowRight, Leaf, Zap, Recycle } from "lucide-react";
 import { Leaf01Icon, ZapIcon, Recycle01Icon } from "hugeicons-react";
 import Butt from "./Button";
 

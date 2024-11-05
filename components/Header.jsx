@@ -1,4 +1,3 @@
-import { LogIn, UserRoundPlus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Butt from "./Button";

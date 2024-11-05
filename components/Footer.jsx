@@ -1,5 +1,4 @@
 import { Button, Input } from "@nextui-org/react";
-import { UserRoundPlus } from "lucide-react";
 import Link from "next/link";
 import Butt from "./Button";
 
