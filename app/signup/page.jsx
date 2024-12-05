@@ -4,16 +4,22 @@ import Link from "next/link";
 import { Button } from "@nextui-org/react";
 import { useState } from "react";
 import { ArrowLeft01Icon, ArrowRight01Icon } from "hugeicons-react";
+import Image from "next/image";
 
 export default function SignUp() {
   const [isSignUp, setIsSignUp] = useState(false);
 
   return (
-    <div className="flex">
-      <section className="w-1/2 border-r grid place-items-center h-screen">
-        <div>
+    <div className="grid grid-cols-1 lg:grid-cols-2">
+      <section className="border-r grid place-items-center h-screen">
+        <div className="mx-auto">
           <div className="my-10 text-center">
-            <Link href='/' className="font-bold font-playfair text-4xl">CarbonQuest</Link>
+            <div className="flex items-center justify-center gap-3">
+              <Image src="/logo-light.png" height={40} width={40} />
+              <Link href="/" className="font-bold font-playfair text-4xl">
+                CarbonQuest
+              </Link>
+            </div>
             <p className="font-medium lowercase text-neutral-500">
               A Quest to Conqueror Carbon Emission.
             </p>
@@ -77,7 +83,8 @@ export default function SignUp() {
           )}
         </div>
       </section>
-      <section className="w-1/2"></section>
+      <section className="bg-gradient-to-br from-[#d4fc79] to-[#96e6a1]">
+      </section>
     </div>
   );
 }
