@@ -102,7 +102,7 @@ export default function WhyCarbonQuest() {
     <section className="mt-10 max-w-[70rem] mx-auto">
       <div className="text-center">
         <h1 className="text-5xl font-playfair font-medium">Why CarbonQuest?</h1>
-        <p className="mt-2">Here&apos;s why people believe in us!</p>
+        <p className="mt-2">Here&apos;s you should believe in us!</p>
       </div>
 
       {/* Personalized Carbon Insights */}
@@ -110,7 +110,7 @@ export default function WhyCarbonQuest() {
         <h1 className="text-2xl text-center font-semibold">
           Personalized Carbon Insights
         </h1>
-        <div className="grid grid-cols-2 gap-5 mt-4 mx-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4 mx-6">
           <div className="bg-neutral-100 border shadow rounded-2xl p-10">
             <h2 className="text-xl mb-5 font-semibold">
               Your Carbon Footprint

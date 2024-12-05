@@ -4,11 +4,8 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WhyCarbonQuest from "@/components/WhyCarbonQuest";
 import FAQ from "@/components/FAQ";
-import {
-  CircleEqual,
-  CircleUser,
-  Sprout,
-} from "lucide-react";
+import { CircleEqual, CircleUser, Sprout } from "lucide-react";
+import Footer2 from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,11 +13,11 @@ export default function Home() {
       <Header />
       <Hero />
       <section className="min-h-screen flex">
-        <div className="mx-6 bg-accent-400 mb-20 px-10 rounded-3xl min-h-[40rem] w-full flex flex-col gap-[5rem] items-center justify-center">
+        <div className="md:mx-6 bg-accent-400 mb-20 px-10 py-10 md:py-0 md:rounded-3xl min-h-[40rem] w-full flex flex-col gap-[5rem] items-center justify-center">
           <h1 className="text-5xl font-playfair font-medium max-w-[40rem] text-center">
             Calculating your Footprints takes just a few minutes
           </h1>
-          <div className="flex gap-10 text-justify">
+          <div className="flex flex-wrap justify-center gap-10 text-justify">
             <div className="max-w-[20rem]">
               <h2 className="font-bold text-xl mb-4 bg-accent-500 px-3 py-2 flex items-center gap-2">
                 <CircleUser />
@@ -78,7 +75,7 @@ export default function Home() {
       </section>
       <section className="my-[20rem] max-w-[70rem] mx-auto flex flex-col items-center justify-between">
         <div>
-          <h1 className="text-6xl font-playfair font-bold bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-800 to-[#66cc00] pb-2">
+          <h1 className="text-6xl font-playfair font-bold bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-800 to-[#66cc00] pb-2 px-3">
             Small Steps, Big Impact—Track, Learn, and Reduce Your Carbon
             Footprint Today!
           </h1>

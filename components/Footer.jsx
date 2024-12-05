@@ -1,46 +1,75 @@
 import { Button, Input } from "@nextui-org/react";
-import Link from "next/link";
 import Butt from "./Button";
 
 export default function Footer() {
   return (
-    <footer className="bg-accent-400 py-8 border-t border">
-      <div className="px-[13rem] rounded-2xl max-w-[90rem] mx-auto grid grid-cols-2">
-        <div className="flex flex-col gap-4">
-          <div className="flex gap-4 font-medium">
-            <p>Simple •</p>
-            <p>Track •</p>
-            <p>Reduce</p>
-          </div>
-          <h1 className="text-4xl font-playfair font-semibold max-w-[25rem]">
-            Mindful choices, Lasting impact. Track, Reduce and make a
-            difference!
-          </h1>
-          <div className="flex gap-4">
-            {/* <Link
-              href="/signup"
-              className="bg-accent-500 border border-accent-600 px-6 py-2 hover:opacity-80 transition flex items-center gap-2"
-            >
-              <UserRoundPlus className="size-5" />
+    <div className="lg:px-[12rem] px-2 bg-accent-400">
+      <div className="container mx-auto px-4">
+        {/* Navigation */}
+        <nav className="py-6">
+          <ul className="flex items-center gap-2">
+            <li>Simple</li>
+            <li>•</li>
+            <li>Track</li>
+            <li>•</li>
+            <li>Reduce</li>
+          </ul>
+        </nav>
+
+        {/* Main Content */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-24 py-12">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <h1 className="text-4xl font-playfair font-semibold leading-tight">
+              Mindful choices,
+              <br />
+              Lasting impact. Track,
+              <br />
+              Reduce and make a<br />
+              difference!
+            </h1>
+            <Butt href="/signup" className="bg-white">
               Sign Up
-            </Link> */}
-            <Butt href="/signup" className="bg-white">Sign Up</Butt>
+            </Butt>
           </div>
-          <p className="mt-10 text-sm">All rights reserved.</p>
+
+          {/* Right Column */}
+          <div className="space-y-6">
+            <h2 className="font-semibold text-neutral-600">Join Our Newsletter.</h2>
+            <form className="space-y-4">
+              <Input
+                type="text"
+                placeholder="Name"
+              />
+              <Input
+                type="email"
+                placeholder="Email"
+              />
+              <Button
+                type="submit"
+                className="w-full bg-black hover:bg-black/90 text-white h-12"
+              >
+                Submit
+              </Button>
+            </form>
+          </div>
         </div>
-        <div className=" flex flex-col items-end">
-          <p className="font-semibold text-neutral-600">Join Our Newsletter.</p>
-          <div className="mt-5 flex flex-col gap-4">
-            <Input type="text" placeholder="Name" radius="none" className="w-[25rem]" />
-            <Input type="email" placeholder="Email" radius="none" className="w-[25rem]" />
-            <Button radius="none" className="w-[25rem] bg-black text-white">Submit</Button>
+
+        {/* Footer */}
+        <footer className="py-6 mt-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <p>All rights reserved.</p>
+            <div className="flex gap-6">
+              <a href="#" className="hover:underline">
+                Terms of Use
+              </a>
+              <a href="#" className="hover:underline">
+                Privacy Policy
+              </a>
+            </div>
           </div>
-          <div className="flex gap-4 mt-28 underline font-medium text-sm">
-            <Link href="">Terms of Use</Link>
-            <Link href="">Privacy Policy</Link>
-          </div>
-        </div>
+        </footer>
       </div>
-    </footer>
+    </div>
   );
 }

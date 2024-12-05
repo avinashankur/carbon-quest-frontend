@@ -26,8 +26,8 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-5xl md:text-6xl font-semibold mb-6 font-playfair">
-              Discover Your <span className="text-accent-500">Impact</span>
+            <h1 className="text-5xl md:text-6xl font-semibold mb-6 font-playfair leading-[4.5rem] md:leading-normal">
+              Discover Your <span className="bg-accent-400 pl-3 pr-36 py-1 rounded-lg">Impact</span>
             </h1>
             <p className="md:text-lg text-gray-600 mb-8">
               Uncover your carbon footprint and join a community committed to
